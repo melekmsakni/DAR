@@ -5,6 +5,8 @@ public class StaticCounter {
 
     // todo : implement me
     public static void increment(){
+counter++;
+System.out.println(counter);
         //increment counter and print it
     }
 }
