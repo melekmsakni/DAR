@@ -21,10 +21,38 @@ public class Server {
         BufferedReader inServer = new BufferedReader(new InputStreamReader(socClient.getInputStream()));
         PrintWriter outServer = new PrintWriter(new BufferedWriter(new OutputStreamWriter(socClient.getOutputStream())), true);
 
+
+        String a=inServer.readLine();
+
+                int j=a.length()-1;
+                int i=0;
+                while(a.charAt(i)==a.charAt(j) && i<a.length()/2 && j>(a.length()/2)-1  ) {
+                    i++;
+                    j--;
+                }
+                boolean k;
+                if (i==a.length()/2)
+                    k=true;
+                else
+                    k=false;
+
+
+        outServer.println(String.valueOf(k));
+
+
+
+
+
+
+
+
+
         // Read message sent by the client
-        inServer.readLine();
+       /* 5edmti  String a=inServer.readLine();
+        char c=inServer.readLine().charAt(0);
+        outServer.println( a.indexOf(c));
         // Write message to the client
-        System.out.println("something");
+*/
 
         // ****** if you're using DataInputStream & DataOutputStream ******
 
